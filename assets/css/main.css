@@ -5130,7 +5130,7 @@ div {
 }
 .footer-two .footer-two__widget .footer-two__widget-content--contact a {
   gap: 16px;
-  text-transform: lowercase;
+  /* text-transform: lowercase; */
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
