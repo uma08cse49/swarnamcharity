@@ -329,7 +329,7 @@ select,
 label,
 blockquote,
 span {
-  font-size: 16px;
+  font-size: 14px;    /*changed from 16px to 14px*/
   line-height: 30px;
   font-weight: 400;
   color: var(--template-color);
