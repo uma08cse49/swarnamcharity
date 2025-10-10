@@ -2464,6 +2464,21 @@ div {
     background-position: 0% 50%;
   }
 }
+
+.preloader-logo {       /* addionally added starts here */
+   width: 80px;         /* adjust size */
+   height: auto;
+   display: block;
+   margin: 0 auto 10px; /* center and add spacing */
+   animation: spin 2s linear infinite; /* optional spinning effect */
+}
+
+/* Optional spin animation */
+@keyframes spin {
+   from { transform: rotate(0deg); }
+   to { transform: rotate(360deg); }
+}            /* addionally added ends here */
+
 /* ==== 
  --------- (3.03) preloader styles end ---------
  ==== */
