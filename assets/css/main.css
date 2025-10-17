@@ -2477,7 +2477,69 @@ div {
 @keyframes spin {
    from { transform: rotate(0deg); }
    to { transform: rotate(360deg); }
-}            /* addionally added ends here */
+}            /*addionally added ends here */
+
+
+/* .preloader-logo {
+   width: 80px;
+   height: auto;
+   display: block;
+   margin: 0 auto 10px;
+   animation: slideIn 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes slideIn {
+   from { 
+      transform: translateX(-100px);
+      opacity: 0;
+   }
+   to { 
+      transform: translateX(0);
+      opacity: 1;
+   }
+} */
+
+/* .preloader-logo {
+   width: 80px;
+   height: auto;
+   display: block;
+   margin: 0 auto 10px;
+   animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+   0%, 100% { transform: translateY(0); }
+   50% { transform: translateY(-20px); }
+} */
+
+.preloader-logo {
+   width: 80px;
+   display: block;
+   margin: 0 auto 10px;
+   animation: zoomPulse 1s ease-in-out infinite;
+}
+
+@keyframes zoomPulse {
+   0%, 100% { transform: scale(1); }
+   50% { transform: scale(1.2); }
+}
+
+
+
+/* .preloader-logo {
+   width: 80px;
+   display: block;
+   margin: 0 auto 10px;
+   animation: wobble 0.8s ease-in-out infinite;
+}
+
+@keyframes wobble {
+   0%,100% { transform: rotate(0deg); }
+   25% { transform: rotate(3deg); }
+   50% { transform: rotate(-3deg); }
+   75% { transform: rotate(2deg); }
+} */
+
 
 /* ==== 
  --------- (3.03) preloader styles end ---------
@@ -4132,7 +4194,10 @@ div {
           transform: scale(1.2);
   -webkit-transition-delay: 1s;
           transition-delay: 1s;
+           opacity: 1 !important;
+  visibility: visible !important;
 }
+
 .banner-two .swiper-slide-active .banner-two__slider-content span {
   opacity: 1;
   -webkit-transform: translateX(0);
@@ -4227,6 +4292,25 @@ div {
             transform: scale(1.2);
   }
 }
+
+
+
+/* Remove animation delay and make it loop safely */
+/* .banner-two .swiper-slide-active .banner-two__slider-bg {
+  animation: backgroundAnimation 20s linear infinite !important;
+  transform-origin: center !important;
+} */
+
+/* Keyframes stay the same, just longer duration prevents snap */
+/* @keyframes backgroundAnimation {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+} */
+
 @-webkit-keyframes moveLeftRight {
   0% {
     -webkit-transform: translateX(0);
@@ -5710,14 +5794,35 @@ div {
   font-weight: 500;
   margin-top: 20px;
 }
-.difference .difference__single-first .difference__single-thumb {
+/* .difference .difference__single-first .difference__single-thumb {
   background-color: #ffc107;
+} */
+.difference .difference__single-first .difference__single-thumb {
+  background-color: #00A8FF;
 }
-.difference .difference__single-second .difference__single-thumb {
+/* .difference .difference__single-second .difference__single-thumb {
   background-color: #122f2a !important;
+} */
+.difference .difference__single-second .difference__single-thumb {
+  background-color: #FF7A00 !important;
 }
-.difference .difference__single-third .difference__single-thumb {
+/* .difference .difference__single-third .difference__single-thumb {
   background-color: #ff5528;
+} */
+.difference .difference__single-third .difference__single-thumb {
+  background-color:  #28A745;
+}
+
+.difference .difference__single-fourth .difference__single-thumb {
+  background-color: #D4A017;
+}
+
+.difference .difference__single-fifth .difference__single-thumb {
+  background-color: #5B2EA6;
+}
+
+.difference .difference__single-sixth .difference__single-thumb {
+  background-color: #0F6B63;
 }
 .difference .slider-navigation {
   display: -webkit-box;
@@ -5743,6 +5848,38 @@ div {
   min-width: 30px;
   animation: moveUpDown 10s ease-in-out infinite alternate-reverse;
 }
+
+
+
+
+/* Ensure icon displays from your custom font */
+.icon-elderly:before,
+.icon-wheelchair:before,
+.icon-rural:before {
+    font-family: 'charifund' !important;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    line-height: 1;
+}
+
+/* Style the circle around the icon */
+.difference__single-thumb i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;       /* adjust size */
+    height: 80px;
+    border-radius: 50%;
+    font-size: 40px;   /* icon size */
+    color: #fff;
+}
+
+/* Individual colors for each section */
+.difference__single-thumb .icon-elderly { background-color: #D4A017; }              /* Golden Yellow */
+.difference__single-thumb .icon-wheelchair { background-color: #5B2EA6; }       /* Royal Purple */
+.difference__single-thumb .icon-rural { background-color: #0F6B63; }              /*Deep Teal Green */
+
 
 @-webkit-keyframes moveUpDown {
   0% {
@@ -20549,6 +20686,22 @@ div {
 
 
 
+.difference__single-thumb .icon-elderly:before {
+    font-family: 'charifund' !important;
+    content: '\e900' !important;
+    font-size: 40px;
+    color: #fff;
+}
+.difference__single-thumb .icon-wheelchair:before {
+    font-family: 'charifund' !important;
+    content: '\e901' !important;
+}
+
+.difference__single-thumb .icon-rural:before {
+    font-family: 'charifund' !important;
+    content: '\e902' !important;
+}
+
 
 
 
@@ -20563,3 +20716,13 @@ div {
  ==== */
 
 
+.icon-elderly:before,
+.icon-physically:before,
+.icon-rural:before {
+  color: var(--icon-color);
+  font-size: 48px;
+}
+
+i[class^="icon-"], i[class*=" icon-"] {
+    font-family: 'charifund' !important;
+}

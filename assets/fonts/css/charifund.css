@@ -84,3 +84,8 @@
 .icon-circle-arrow:before { content: '\e82c'; } /* '' */
 .icon-message-two:before { content: '\e82d'; } /* '' */
 .icon-user-two:before { content: '\e82e'; } /* '' */
+
+.icon-elderly:before { content: '\e900'; }
+.icon-wheelchair:before { content: '\e901'; }
+.icon-rural:before { content: '\e902'; }
+
