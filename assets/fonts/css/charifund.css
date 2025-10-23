@@ -10,6 +10,26 @@
   font-style: normal;
 }
 
+
+@font-face {
+  font-family: 'charifund';
+  src: url('/assets/fonts/webfonts/charifund.eot');
+  src: url('/assets/fonts/webfonts/charifund.eot?#iefix') format('embedded-opentype'),
+       url('/assets/fonts/webfonts/charifund.woff2') format('woff2'),
+       url('/assets/fonts/webfonts/charifund.woff') format('woff'),
+       url('/assets/fonts/webfonts/charifund.ttf') format('truetype'),
+       url('/assets/fonts/webfonts/charifund.svg#charifund') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.icon-elderly:before,
+.icon-wheelchair:before,
+.icon-rural:before {
+  font-family: 'charifund-new' !important;
+}
+
 [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "charifund";
   font-style: normal;
@@ -89,3 +109,20 @@
 .icon-wheelchair:before { content: '\e901'; }
 .icon-rural:before { content: '\e902'; }
 
+
+.difference__single-thumb {
+  width: 90px;
+  height: 90px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.difference__single-thumb img {
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+}
