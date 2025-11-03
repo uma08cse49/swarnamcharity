@@ -20788,3 +20788,163 @@ i[class^="icon-"], i[class*=" icon-"] {
   font-weight: normal;
   font-style: normal;
 }
+
+/* ======Our Services Start==================== */
+
+
+/* .education-section {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #e9f9f8;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+}
+
+.education-section h2 {
+  color: #1c5d77;
+} */
+/* 
+.hidden-content {
+  display: none;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+} */
+
+.learn-more-btn {
+  background-color: #f8a21b;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 15px 0;
+  font-size: 16px;
+}
+
+.learn-more-btn:hover {
+  background-color: #e89000;
+}
+
+.education-section {
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.edu-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.edu-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.edu-content {
+  flex: 1;
+  min-width: 280px;
+}
+
+.edu-content h2 {
+  color: #2f4f4f;
+  margin-bottom: 15px;
+}
+
+.learn-more-btn {
+  background-color: #f8a21b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 15px;
+  transition: background 0.3s;
+}
+
+.learn-more-btn:hover {
+  background-color: #e89000;
+}
+
+/* .hidden-content {
+  display: none;
+  margin-top: 30px;
+  background: #f6fbfc;
+  padding: 20px;
+  border-radius: 8px;
+  animation: slideDown 0.4s ease-out;
+} */
+
+.hidden-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+}
+
+.hidden-content.show { 
+  max-height: 800px; /*large enough for your content */
+  opacity: 1;
+}
+
+.hidden-content.active {
+  max-height: 1000px; /* Enough to fit your content */
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ===============newly added learn more button ===================== */
+
+.content {
+    max-width: 600px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  .hidden-content {
+    display: none; /* initially hidden */
+    margin-top: 10px;
+  }
+
+.btn-learn-more {
+  display: inline-block;
+  background-color: #ff8c00;       /* match the orange in the logo/banner */
+  color: #ffffff;                   /* white text for strong contrast */
+  padding: 12px 28px;               /* generous padding for clear tap/click target */
+  border-radius: 6px;               /* slightly rounded corners for friendly feel */
+  font-family: 'Arial', sans-serif; /* simple and readable font */
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-learn-more:hover,
+.btn-learn-more:focus {
+  background-color: #e67c00;        /* slightly darker orange on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.btn-learn-more:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
