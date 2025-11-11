@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Service Block Preview</title>
+<style>
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background: #f7f7f7;
+  padding: 50px;
+}
+
+/* --- Service Block --- */
+.service-block {
+  width: 100%;
+  margin-bottom: 60px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.service-top {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+  flex-wrap: wrap;
+}
+
+.service-image,
+.service-content {
+  flex: 1 1 50%;
+}
+
+.service-image img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.service-content h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.service-content p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.learn-more-btn {
+  background-color: #ffb300;
+  color: #fff;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 15px;
+}
+
+.learn-more-btn:hover {
+  background-color: #ff9800;
+}
+
+/* --- Hidden Content --- */
+.hidden-content {
+  display: none;
+  padding: 25px 30px;
+  border-top: 2px solid #ffb300;
+  background: #f9f9f9;
+  animation: slideDown 0.4s ease forwards;
+}
+
+@keyframes slideDown {
+  from {opacity: 0; transform: translateY(-10px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.service-block.expanded .hidden-content {
+  display: block;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .service-top {
+    flex-direction: column;
+  }
+  .service-image, .service-content {
+    flex: 1 1 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<section class="service-block">
+  <div class="service-top">
+    <div class="service-image">
+      <img src="https://via.placeholder.com/400x250.png?text=Swarnam+Charities" alt="Educate Every Child" />
+    </div>
+
+    <div class="service-content">
+      <h3>Educate Every Child — Build Their Future</h3>
+      <p>“When you educate a child, you uplift a generation.”</p>
+      <p>At Swarnam Charities, we believe education is not just a right — it’s a powerful catalyst for transformation.</p>
+      <button class="learn-more-btn">Learn More</button>
+    </div>
+  </div>
+
+  <div class="hidden-content">
+    <p>Each child receives school essentials — books, uniforms, and stationery — removing all financial barriers. Beyond academics, we nurture confidence, empathy, and responsibility through activities, storytelling, and mentoring.</p>
+    <h4>Key Initiatives:</h4>
+    <ul>
+      <li>Free education for children in need</li>
+      <li>School-kit distribution (bags, books, stationery)</li>
+      <li>Mid-day meals and nutritional care</li>
+      <li>Counselling and extracurricular learning</li>
+    </ul>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".learn-more-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const block = btn.closest(".service-block");
+      block.classList.toggle("expanded");
+      btn.textContent = block.classList.contains("expanded")
+        ? "Show Less"
+        : "Learn More";
+    });
+  });
+});
+</script>
+
+</body>
+</html>

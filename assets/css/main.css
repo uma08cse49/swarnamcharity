@@ -20948,3 +20948,216 @@ i[class^="icon-"], i[class*=" icon-"] {
   from { opacity: 0; transform: translateY(-10px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
+
+
+
+.service-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.service-left {
+  flex: 1;
+  position: relative;
+}
+
+.service-left img {
+  width: 100%;
+  border-radius: 8px;
+  overflow: visible !important;
+}
+
+.hidden-content {
+  display: none;
+  background: #f7f7f7;
+  margin-top: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  animation: fadeIn 0.4s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.service-right {
+  flex: 1;
+}
+
+.learn-more-btn {
+  background-color: #ff8c00;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.learn-more-btn:hover {
+  background-color: #e67e00;
+}
+
+/* === Fix for hidden-content visibility === */
+/* === Fix for hidden-content visibility === */
+/* .service-block,
+.service-left,
+.service-image {
+  overflow: visible !important;
+  position: relative;
+}
+
+.hidden-content {
+  display: none;
+  position: relative;
+  z-index: 10;
+  background: #ffffff;
+  padding: 16px;
+  margin-top: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+} */
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.service-block {
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.service-top {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.service-image,
+.service-content {
+  flex: 1;
+}
+
+.service-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.hidden-content {
+  display: none;
+  margin-top: 20px;
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  background-color: #ff8c00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+
+/* ========== L-Stack (Our Services) ========== */
+.l-stack {
+  --brand: #fdc007;
+  --ink: #0f1222;
+  --muted: #5b647a;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+}
+.l-stack * { box-sizing: border-box; }
+
+/* ----- Card layout ----- */
+.l-card {
+  display: grid;
+  gap: 24px;
+  align-items: start;
+  grid-template-columns: 1fr 1.05fr;  /* image | intro */
+  grid-template-areas: "media intro" "expand expand";
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px;
+  margin: 28px auto;
+  max-width: 1200px;
+}
+.l-card.right {
+  grid-template-columns: 1.05fr 1fr;
+  grid-template-areas: "intro media" "expand expand";
+}
+
+/* ----- Media & Intro ----- */
+.l-card .media { grid-area: media; }
+.l-card .media img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.l-card .intro { grid-area: intro; }
+.l-card h2 { margin: .2rem 0 1rem; font-size: 2.25rem; line-height: 1.15; color: var(--ink); }
+.l-card p { margin: .6rem 0; color: var(--muted); }
+
+/* ----- Button ----- */
+.l-card .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  background: var(--brand);
+  color: #111;
+  border: none;
+  cursor: pointer;
+  border-radius: 999px;
+  padding: .78rem 1rem;
+  font-weight: 700;
+  transition: background .25s ease;
+}
+.l-card .btn:hover { background: #ffc933; }
+.l-card .btn:focus { outline: 3px solid rgba(253,192,7,.35); }
+
+/* ----- Expandable panel ----- */
+.l-card .expand {
+  grid-area: expand;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .45s ease;
+}
+.l-card .expand-inner {
+  padding-top: 12px;
+  border-top: 1px solid #eceff5;
+  color: #2a3347;
+}
+.l-card ul { margin: .35rem 0 0; padding-left: 1.1rem; }
+.l-card li { margin: .35rem 0; }
+
+/* ----- Open state ----- */
+.l-card[data-open="true"] .expand { max-height: 2000px; }
+/* .l-card[data-open="true"] [data-toggle]::after { content: "  (Show less)"; } */
+
+/* ----- Responsive ----- */
+@media (max-width: 900px) {
+  .l-card, .l-card.right {
+    grid-template-columns: 1fr;
+    grid-template-areas: "media" "intro" "expand";
+  }
+  .l-card h2 { font-size: 1.9rem; }
+}

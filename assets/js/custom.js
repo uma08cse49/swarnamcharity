@@ -1800,3 +1800,17 @@
 
 
 })(jQuery);
+
+
+const blocks = document.querySelectorAll('.service-block');
+window.addEventListener('scroll', () => {
+  blocks.forEach(block => {
+    const rect = block.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      block.classList.add('show');
+    } else {
+      block.classList.remove('show');
+    }
+  });
+});
+
