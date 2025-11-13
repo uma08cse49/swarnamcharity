@@ -21143,6 +21143,14 @@ i[class^="icon-"], i[class*=" icon-"] {
   transform: translateY(-10px); 
   transition: max-height .45s ease;
 }
+
+
+.l-card[data-open="true"] .expand {
+  max-height: 2000px; /* enough to fit content */
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .l-card .expand-inner {
   padding-top: 12px;
   border-top: 1px solid #eceff5;
