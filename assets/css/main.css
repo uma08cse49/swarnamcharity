@@ -21139,6 +21139,8 @@ i[class^="icon-"], i[class*=" icon-"] {
   grid-area: expand;
   overflow: hidden;
   max-height: 0;
+  opacity: 1;
+  transform: translateY(-10px); 
   transition: max-height .45s ease;
 }
 .l-card .expand-inner {
