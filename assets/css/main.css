@@ -21099,6 +21099,9 @@ i[class^="icon-"], i[class*=" icon-"] {
   padding: 18px;
   margin: 28px auto;
   max-width: 1200px;
+
+  /* 🟢 Add this line */
+  contain: layout paint; /* prevents reflow to parent grid while animating */
 }
 .l-card.right {
   grid-template-columns: 1.05fr 1fr;
@@ -21146,7 +21149,7 @@ i[class^="icon-"], i[class*=" icon-"] {
 
 
 .l-card[data-open="true"] .expand {
-  max-height: 2000px; /* enough to fit content */
+  max-height: none; /* enough to fit content */
   opacity: 1;
   transform: translateY(0);
 }
